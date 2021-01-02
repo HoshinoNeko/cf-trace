@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Lookup which node you access fron CloudFlare</title>
-
+    <style>
+        span {
+            font-size: 2vh;
+        }
+    </style>
 </head>
 <body>
 <h1>Lookup which node are you accessing from CloudFlare</h1>
 <hr>
-<p id="loc">Loading...</p>
+<span>You are visiting from: </span>
+<span id="loc">Loading...</span>
 <script>
     var req = new XMLHttpRequest();
     req.open('GET', "/cdn-cgi/trace", false);
